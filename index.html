@@ -1,0 +1,39 @@
+<html>
+<head></head>
+<body>
+    <script>
+        // keep
+
+        let pencil = new Pencil()
+
+        let knotStackedFromComputed = new KnotStackedFromComputed()
+        // keep
+
+        let draftFabrikk = new DraftFabrikk()
+
+        // keep !
+        let knotLabirintFromCubicProject = new KnotLabirintFromCubicProject()
+        pencil.useKnot(knotLabirintFromCubicProject)
+
+        let frontStatement = draftFabrikk.constructFrontStatement()
+
+        let profileStatement = draftFabrikk.constructProfileStatement()
+        let bottomStatement = draftFabrikk.constructBottomStatement()
+
+        pencil.putComputedFrontStatement(frontStatement)
+        pencil.putComputedProfileStatement(profileStatement)
+        pencil.putComputedBottomStatement(bottomStatement)
+
+        pencil.putKnotConnectedToBottomStatement(bottomStatement, knotStackedFromComputed)
+        pencil.lockStacked(bottomStatement, knotStackedFromComputed)
+
+        pencil.lock()
+        pencil.draw()
+
+        // keep !
+
+    </script>
+
+</body>
+
+</html>
